@@ -1,0 +1,25 @@
+{% extends "boat.html" %}
+
+
+{% block item%}
+
+         <table class="table table-borderless table-hover text-center">
+            <thead>
+              <tr>
+                <th scope="col">Task</th>
+                <!-- <th scope="col">Last</th> -->
+                <!-- <th scope="col">Handle</th> -->
+              </tr>
+            </thead>
+            <tbody>
+              {% for i in items %}
+              <tr>
+          <td>{{i.text}}</td>
+          <td>
+            <a href="{% url 'delete' i.id %} ">Delete</a>
+          </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+   {% endblock item%}      

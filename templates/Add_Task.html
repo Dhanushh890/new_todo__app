@@ -1,0 +1,25 @@
+{% extends "boat.html" %}
+
+
+{% block form %}
+<center>
+  <h2> Add Your Task</h2>
+<form action="" method="POST">
+    {% csrf_token%}
+    <!-- <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div> -->
+    <div data-mdb-input-init class="container"><br>
+        <textarea class="form-control" name="text" id="typehere" rows="4"># Delete this text and type....</textarea>
+        <label class="form-label" for="textAreaExample"></label>
+      </div>      
+    <!-- <div class="mb-3 form-check"> -->
+      <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label> -->
+    <!-- </div> -->
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</center>
+{% endblock form %}
